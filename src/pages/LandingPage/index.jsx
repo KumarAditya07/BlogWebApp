@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Text, Img, Heading, Button, Input } from "../../components";
+import { Link } from "react-router-dom";
 
 export default function LandingPagePage() {
   return (
@@ -11,26 +12,33 @@ export default function LandingPagePage() {
       </Helmet>
       <div className="flex flex-col items-center justify-start w-full gap-[95px] bg-white-A700">
         <header className="flex flex-row justify-between items-center w-full p-6 bg-white-A700">
-          <div className="flex flex-row justify-between items-center w-[55%] ml-[139px]">
+          <div className="flex flex-row justify-between items-center w-[65%] ml-[139px]">
             <Img src="images/img_group_150.svg" alt="image" className="h-6" />
-            <div className="flex flex-row justify-between items-center w-[53%]">
+            <div className="flex flex-row justify-between items-center w-[52%] md:w-3/5 lg:w-2/5">
               <div className="flex flex-col items-center justify-start w-[13%] gap-0.5">
                 <Heading as="h6" className="!text-indigo-900_01 tracking-[0.12px] text-center">
-                  Home
+                  <Link to="/" style={{ textDecoration: "none" }}>
+                    Home
+                  </Link>
                 </Heading>
-                <div className="h-px w-full bg-indigo-900_01" />
               </div>
+
               <Heading as="h6" className="!text-indigo-200_01 tracking-[0.12px] text-center">
-                Podcast
+                <Link to="/blogdetails" style={{ textDecoration: "none" }}>
+                  BlogDetails
+                </Link>
               </Heading>
+
               <Heading as="h6" className="!text-indigo-200_01 tracking-[0.12px] text-center">
-                Blog
+                <Link to="/bloggerdetails" style={{  textDecoration: "none" }}>
+                  BloggerDetails
+                </Link>
               </Heading>
+
               <Heading as="h6" className="!text-indigo-200_01 tracking-[0.12px] text-center">
-                About
-              </Heading>
-              <Heading as="h6" className="!text-indigo-200_01 tracking-[0.12px] text-center">
-                Contact
+                <Link to="/contactus" style={{ textDecoration: "none" }}>
+                  ContactUs
+                </Link>
               </Heading>
             </div>
           </div>
